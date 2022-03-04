@@ -53,7 +53,7 @@ spec:
       echo "scmbranch value inside gradle is :" + scmbranch
 
       
-      git url: 'https://github.com/kamalakar07/week6.git', branch: scmbranch
+      git url: 'https://github.com/SaintamenEdwards/week6.git', branch: scmbranch
 
       stage("debug stage") {
           sh """
@@ -108,7 +108,7 @@ spec:
         echo 'COPY ./calculator-0.0.1-SNAPSHOT.jar app.jar' >> Dockerfile
         echo 'ENTRYPOINT ["java", "-jar", "app.jar"]' >> Dockerfile
         mv /mnt/calculator-0.0.1-SNAPSHOT.jar .
-        /kaniko/executor --context `pwd` --destination kamalakar07/hello-kaniko:1.0
+        /kaniko/executor --context `pwd` --destination mrstamiedwards/hello-kaniko:1.0
         '''
       }
     }
